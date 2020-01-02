@@ -81,4 +81,10 @@ class UsersController extends Controller
 
         return redirect()->route('admin.users.index');
     }
+
+    public function orders()
+    {
+        return view('admin.users.orders');
+    }
+
 }

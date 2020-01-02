@@ -60,7 +60,7 @@
                                     <a class="dropdown-item" href="{{ route('admin.users.index') }}" >
                                         Upravljanje korisnicima
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('orders') }}" >
+                                    <a class="dropdown-item" href="{{ route('admin.users.orders') }}" >
                                         Dostava
                                     </a>
                                     @endcan

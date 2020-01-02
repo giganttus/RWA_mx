@@ -1,85 +1,132 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <html class="no-js" lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mexpress</title>
+        <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}" >
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" >
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Početna</a>
-                    @else
-                        <a href="{{ route('login') }}">Prijava</a>
+<body>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Registracija</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="menu">
+            <li class="menu-text"><i class="fa fa-truck" aria-hidden="true"></i> Mexpress</li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><a href="#"><i class="fa fa-cubes" aria-hidden="true"></i> Pošiljke</a></li>
+            <li><a href="#cjenik"><i class="fa fa-cubes" aria-hidden="true"></i> Cjenik</a></li>
+        @if (Route::has('login'))
+           @auth
+            <li><a href="{{ url('/home') }}"><i class="fa fa-user" aria-hidden="true"></i> Korisniči panel</a></li>
+           @else
+           <li><a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> Prijava</a></li>
+           @if (Route::has('register'))
+           <li><a href="{{ route('register') }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Registracija</a></li>
+           @endif
+           @endauth
+        @endif
+        </ul>
+    </div>
+</div>
 
-            <div class="content">
-        </div>
-    </body>
+<div class="callout large">
+    <div class="row column text-center">
+        <h1>Razbijamo predrasude o brzoj dostavi</h1>
+        <p class="lead">Pratite, šaljite i primajte pošiljke uz vaš Mexpress</p>
+        <a href="{{ asset('/vizija/vizija.pdf') }}" class="button large">Saznajte više o projektu (vizija)</a>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="medium-6 columns medium-push-6">
+        <img class="thumbnail" src="{{ asset('bdl.jpg') }}">
+    </div>
+    <div class="medium-6 columns medium-pull-6">
+        <h2>O nama</h2>
+        <p>Naš rad zasnovan je na pouzdanju, brzini i sigurnosti</p>
+        <p>Još od 90. godina prošlog stoljeća ispunjavamo vaše želje i potrebe. Zadovoljstvo mnogobrojnih kućanstava
+            i poduzeća se vidi na utiscima naših korisnika.
+        Iskustvo kroz dugi niz godina doprinosi usavršenju naše usluge</p>
+        <p>Naš transport ispunjava sve vaše zahtjeve, kontaktirajte nas te odlučite što želite, a brige su naše</p>
+        <p>Bez Vas naša usluga je bezsmislena, gradimo budućnost zajedno</p>
+    </div>
+</div>
+
+
+<hr>
+<div class="row">
+    <div class="row column text-center" id="cjenik">
+        <h1>Cjenik usluga</h1>
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>XS Paket</h3>
+        <p>Cjena: 5,00 KM</p>
+        <img class="thumbnail" src="{{ asset('kutije/xs.png') }}">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>S Paket</h3>
+        <p>Cjena: 9,00 KM</p>
+        <img class="thumbnail" src="{{ asset('kutije/s.png') }}">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>M Paket</h3>
+        <p>Cjena: 13,50 KM</p>
+        <img class="thumbnail" src="{{ asset('kutije/m.png') }}">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>L Paket</h3>
+        <p>Cjena: 18,00 KM</p>
+        <img class="thumbnail" src="{{ asset('kutije/l.png') }}">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>XL Paket</h3>
+        <p>Cjena: 22,50 KM</p>
+        <img class="thumbnail" src="{{ asset('kutije/xl.png') }}">
+    </div>
+
+    <div class="medium-4 columns">
+        <h3>XXL Paket</h3>
+        <p>Cjena: "ovisna o svakom kilogramu preko"</p>
+        <img class="thumbnail" src="{{ asset('kutije/xxl.png') }}">
+    </div>
+</div>
+
+<hr>
+<div class="row column">
+    <ul class="vertical medium-horizontal menu expanded text-center">
+        <li><a href="#"><div class="stat">28</div><span>Websites</span></a></li>
+        <li><a href="#"><div class="stat">43</div><span>Apps</span></a></li>
+
+    </ul>
+</div>
+
+
+<div class="row column">
+    <a>Designet by: Ljubomir Prce, Mile Lerko, Domagoj Perić</a>
+</div>
+
+
+<script src="{{ asset('js/foundation.js') }}" defer></script>
+<script src="{{ asset('js/jquery-2.1.4.min.js') }}" defer></script>
+<script>
+    $(document).foundation();
+</script>
+</body>
 </html>
+
+
