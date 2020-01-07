@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use App\info;
 use Gate;
+use DB;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Role;
@@ -80,11 +82,6 @@ class UsersController extends Controller
         $user->delete();
 
         return redirect()->route('admin.users.index');
-    }
-
-    public function orders()
-    {
-        return view('admin.users.orders');
     }
 
 }

@@ -18,24 +18,24 @@ class UsersTableSeeder extends Seeder
         DB::table('role_user')->truncate();
 
         $adminRole = Role::where('name', 'admin')->first();
-        $authorRole = Role::where('name', 'author')->first();
+        $authorRole = Role::where('name', 'kurir')->first();
         $userRole = Role::where('name', 'user')->first();
 
         $admin = User::create([
-            'name' => 'Admin User',
-            'email' => 'admin@admin.com',
+            'name' => 'Admin',
+            'email' => 'admin@mexpresss.com',
             'password' => Hash::make('password')
         ]);
 
         $author = User::create([
-            'name' => 'Author User',
-            'email' => 'author@author.com',
+            'name' => 'Kurir',
+            'email' => 'kurir@mexpress.com',
             'password' => Hash::make('password')
         ]);
 
         $user = User::create([
-            'name' => 'Generic User',
-            'email' => 'user@user.com',
+            'name' => 'Korisnik',
+            'email' => 'korisnik@mexpress.com',
             'password' => Hash::make('password')
         ]);
 

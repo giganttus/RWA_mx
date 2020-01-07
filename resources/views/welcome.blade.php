@@ -10,10 +10,10 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}" >
         <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" >
 
-
     </head>
-<body>
 
+<body>
+<!-- Navigacijski (top-bar) -->
 <div class="top-bar">
     <div class="top-bar-left">
         <ul class="menu">
@@ -22,11 +22,11 @@
     </div>
     <div class="top-bar-right">
         <ul class="menu">
-            <li><a href="#"><i class="fa fa-cubes" aria-hidden="true"></i> Pošiljke</a></li>
-            <li><a href="#cjenik"><i class="fa fa-cubes" aria-hidden="true"></i> Cjenik</a></li>
+            <li><a href="#cjenik"><i class="fa fa-money" aria-hidden="true"></i> Cjenik</a></li>
+            <li><a href="{{ route('tracking') }}"><i class="fa fa-cubes" aria-hidden="true"></i> Praćenje pošiljke</a></li>
         @if (Route::has('login'))
            @auth
-            <li><a href="{{ url('/home') }}"><i class="fa fa-user" aria-hidden="true"></i> Korisniči panel</a></li>
+            <li><a href="{{ url('/home') }}"><i class="fa fa-user" aria-hidden="true"></i> Korisnički panel</a></li>
            @else
            <li><a href="{{ route('login') }}"><i class="fa fa-sign-in" aria-hidden="true"></i> Prijava</a></li>
            @if (Route::has('register'))
@@ -38,6 +38,7 @@
     </div>
 </div>
 
+<!-- Content ispod navigacijske -->
 <div class="callout large">
     <div class="row column text-center">
         <h1>Razbijamo predrasude o brzoj dostavi</h1>
@@ -46,7 +47,7 @@
     </div>
 </div>
 
-
+<!-- Uvodni slika i tekst -->
 <div class="row">
     <div class="medium-6 columns medium-push-6">
         <img class="thumbnail" src="{{ asset('bdl.jpg') }}">
@@ -61,9 +62,9 @@
         <p>Bez Vas naša usluga je bezsmislena, gradimo budućnost zajedno</p>
     </div>
 </div>
-
-
 <hr>
+
+<!-- Cjenik Menu  -->
 <div class="row">
     <div class="row column text-center" id="cjenik">
         <h1>Cjenik usluga</h1>
@@ -101,12 +102,13 @@
 
     <div class="medium-4 columns">
         <h3>XXL Paket</h3>
-        <p>Cjena: "ovisna o svakom kilogramu preko"</p>
+        <p>Cjena: "ovisno po vaganju"</p>
         <img class="thumbnail" src="{{ asset('kutije/xxl.png') }}">
     </div>
 </div>
-
 <hr>
+
+<!-- Stats footer trake
 <div class="row column">
     <ul class="vertical medium-horizontal menu expanded text-center">
         <li><a href="#"><div class="stat">28</div><span>Websites</span></a></li>
@@ -114,8 +116,9 @@
 
     </ul>
 </div>
+-->
 
-
+<!-- Footer za cR -->
 <div class="row column">
     <a>Designet by: Ljubomir Prce, Mile Lerko, Domagoj Perić</a>
 </div>

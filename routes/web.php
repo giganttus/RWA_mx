@@ -21,6 +21,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:manage-users')->group(function(){
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
-    Route::get('/user/orders', 'UsersController@orders')->name('users.orders');
+    //Route::get('/user/orders', 'UsersController@orders')->name('users.orders');
 
 });
+
+Route::get('/form', 'OrdersController@index')->name('form');
+Route::post('submit','OrdersController@save');
+
+Route::get('/orders', 'OrdersController@orders')->name('orders');
+Route::get('/editorders', 'OrdersController@editorders')->name('editorders');
+
+
