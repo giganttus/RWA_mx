@@ -25,10 +25,16 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:mana
 
 });
 
-Route::get('/form', 'OrdersController@index')->name('form');
+
+Route::get('/ordersrequest', 'OrdersController@ordersrequest')->name('orders.request');
 Route::post('submit','OrdersController@save');
 
-Route::get('/orders', 'OrdersController@orders')->name('orders');
-Route::get('/editorders', 'OrdersController@editorders')->name('editorders');
+Route::get('/orders', 'OrdersController@index')->name('orders');
+Route::get('/ordersedit/{orders}', 'OrdersController@edit')->name('orders.edit');
+Route::delete('/ordersdestroy/{orders}', 'OrdersController@destroy')->name('orders.destroy');
+Route::put('/ordersupdate/{orders}', 'OrdersController@update')->name('orders.update');
+
+Route::get('/orderstracking', 'OrdersController@orderstracking')->name('orders.tracking');
+Route::get('/orderstracker', 'OrdersController@orderstracker')->name('orders.tracker');
 
 

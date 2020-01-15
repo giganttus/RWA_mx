@@ -60,12 +60,17 @@
                                     <a class="dropdown-item" href="{{ route('admin.users.index') }}" >
                                         Upravljanje korisnicima
                                     </a>
+                                    @endcan
+                                    @can('manage-orders')
                                     <a class="dropdown-item" href="{{ route('orders') }}" >
                                         Upravljanje pošiljkama
                                     </a>
                                     @endcan
-                                    <a class="dropdown-item" href="{{ route('form') }}" >
+                                    <a class="dropdown-item" href="{{ route('orders.request') }}" >
                                         Zahtjevi za dostavu
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('orders.tracking') }}" >
+                                        Praćenje pošiljke (Tracking)
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"

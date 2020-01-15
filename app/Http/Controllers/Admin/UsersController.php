@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\info;
 use Gate;
 use DB;
 use App\Http\Controllers\Controller;

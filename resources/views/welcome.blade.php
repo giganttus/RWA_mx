@@ -23,7 +23,7 @@
     <div class="top-bar-right">
         <ul class="menu">
             <li><a href="#cjenik"><i class="fa fa-money" aria-hidden="true"></i> Cjenik</a></li>
-            <li><a href="{{ route('tracking') }}"><i class="fa fa-cubes" aria-hidden="true"></i> Praćenje pošiljke</a></li>
+            <li><a href="{{ route('orders.tracking') }}"><i class="fa fa-cubes" aria-hidden="true"></i> Praćenje pošiljke</a></li>
         @if (Route::has('login'))
            @auth
             <li><a href="{{ url('/home') }}"><i class="fa fa-user" aria-hidden="true"></i> Korisnički panel</a></li>
@@ -44,6 +44,7 @@
         <h1>Razbijamo predrasude o brzoj dostavi</h1>
         <p class="lead">Pratite, šaljite i primajte pošiljke uz vaš Mexpress</p>
         <a href="{{ asset('/vizija/vizija.pdf') }}" class="button large">Saznajte više o projektu (vizija)</a>
+        <a href="https://github.com/giganttus/RWA_mx" class="button large">Github projekta</a>
     </div>
 </div>
 
@@ -120,7 +121,8 @@
 
 <!-- Footer za cR -->
 <div class="row column">
-    <a>Designet by: Ljubomir Prce, Mile Lerko, Domagoj Perić</a>
+    <a>Designed by:  Mile Leko, Ljubomir Prce, Domagoj Perić</a> <br>
+    <a>We used: Laravel framework, Bootstrap(Admin panel), Zurb Foundation(Homepage), Font Awesome (Font & icons)</a>
 </div>
 
 
