@@ -9,8 +9,12 @@
                 <div class="alert alert-success">
                     {{Session::get('success')}}
                 </div>
-                @else
+                <div class="form-group col-md-12 text-right">
+                    <a href="{{route('orders.request')}}">Nazad</a>
+                </div>
 
+
+                @else
             <div class="card text-center">
                 <!-- pošiljatelj  -->
                 <div class="card-header">

@@ -11,10 +11,9 @@
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-12">
-
                                     <input type="text" class="form-control" name="id" placeholder="TC (Tracking Code)" required>
                                 </div>
-                                <div class="form-group col-md-8">
+                                <div class="form-group col-md-12 text-center">
                             <button type="submit" class="btn btn-primary">
                                 Traži
                             </button>

@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">xxxxx</div>
+                <h3 class="card-header text-center">Dobrodošli!</h3>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,8 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    Prijavljeni ste!
+                <div class="form-group col-md-12 text-center">
+                     <p>Uspješno ste se prijavili, za bilo kakve radnje polužite se padajućim izbornikom ispod vašeg korisničkog imena (Desni gornji kut)</p>
+                </div>
                 </div>
             </div>
         </div>
