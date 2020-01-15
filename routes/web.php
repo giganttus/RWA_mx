@@ -35,6 +35,6 @@ Route::delete('/ordersdestroy/{orders}', 'OrdersController@destroy')->name('orde
 Route::put('/ordersupdate/{orders}', 'OrdersController@update')->name('orders.update');
 
 Route::get('/orderstracking', 'OrdersController@orderstracking')->name('orders.tracking');
-Route::get('/orderstracker', 'OrdersController@orderstracker')->name('orders.tracker');
+Route::post('/orderstracker', 'OrdersController@orderstracker')->name('orders.tracker');
 
 

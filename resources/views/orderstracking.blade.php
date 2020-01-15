@@ -7,7 +7,7 @@
                 <div class="card">
                     <h5 class="card-header text-center">Praćenje pošiljke</h5>
                     <div class="card-body ">
-                        <form action="" method="post">
+                        <form action="{{route('orders.tracker')}}" method="post">
                             @csrf
                             <div class="form-row">
                                 <div class="form-group col-md-12">

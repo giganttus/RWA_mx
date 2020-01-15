@@ -5,7 +5,11 @@
     <!-- Kartica za zahtjeve -->
     <div class="row justify-content-center">
         <div class="col-md-6">
-
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{Session::get('success')}}
+                </div>
+                @else
 
             <div class="card text-center">
                 <!-- pošiljatelj  -->
@@ -155,7 +159,8 @@
                     </div>
                 </div>
             </div>
-
+        @endif
         </div>
     </div>
+
 @endsection

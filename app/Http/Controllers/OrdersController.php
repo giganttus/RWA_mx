@@ -30,7 +30,7 @@ class OrdersController extends Controller
 
         $orders->save();
 
-        return redirect()->route('orders.request');
+        return redirect()->route('orders.request')->withSuccess('Vaš TC je: ' . $orders->id);
 
     }
 
@@ -54,9 +54,10 @@ class OrdersController extends Controller
         return view('orderstracking');
     }
 
-    public function orderstracker()
+    public function orderstracker(Request $request)
     {
-        return view('orderstracker');
+        $order = Orders::findOrFail($request->id);
+        return view('orderstracker')->with('order',$order);
     }
 
     public function destroy(Orders $orders)

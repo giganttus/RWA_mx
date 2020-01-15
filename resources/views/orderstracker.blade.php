@@ -20,10 +20,10 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"></th>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
+                                        <th scope="row">{{$order->id}}</th>
+                                        <td>{{$order->size}}</td>
+                                        <td>{{$order->details}}</td>
+                                        <td>{{$order->status}}</td>
                                 </tbody>
 
                             </table>
