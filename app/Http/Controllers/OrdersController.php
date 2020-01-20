@@ -30,7 +30,7 @@ class OrdersController extends Controller
 
         $orders->save();
 
-        return redirect()->route('orders.request')->withSuccess('Vaš TC je: ' . $orders->id);
+        return redirect()->route('orders.request')->withSuccess('Vaš TC je: '. $orders->id);
 
     }
 

@@ -8,9 +8,11 @@
             @if(Session::has('success'))
                 <div class="alert alert-success">
                     {{Session::get('success')}}
+                    <p>Zabilježite ili zapamtite TC kako bi pratili željenu pošiljku.
+                    TC (Kod za praćenje pošiljke) vidite samo jednom, radi zaštite podataka.</p>
                 </div>
                 <div class="form-group col-md-12 text-right">
-                    <a href="{{route('orders.request')}}">Nazad</a>
+                    <a href="{{ route('orders.request') }}"><button type="button" class="btn btn-primary float-left">Nazad</button></a>
                 </div>
 
 
