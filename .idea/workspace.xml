@@ -49,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="126" column="102" lean-forward="false" selection-start-line="126" selection-start-column="102" selection-end-line="126" selection-end-column="102" />
+              <caret line="126" column="83" lean-forward="false" selection-start-line="126" selection-start-column="83" selection-end-line="126" selection-end-column="83" />
               <folding />
             </state>
           </provider>
@@ -577,12 +577,12 @@
       <workItem from="1579530354801" duration="3827000" />
       <workItem from="1579632383901" duration="800000" />
       <workItem from="1579683098168" duration="1416000" />
-      <workItem from="1579685402177" duration="145000" />
+      <workItem from="1579685402177" duration="299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253938000" />
+    <option name="totallyTimeSpent" value="254092000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,7 +901,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="126" column="102" lean-forward="false" selection-start-line="126" selection-start-column="102" selection-end-line="126" selection-end-column="102" />
+          <caret line="126" column="83" lean-forward="false" selection-start-line="126" selection-start-column="83" selection-end-line="126" selection-end-column="83" />
           <folding />
         </state>
       </provider>
