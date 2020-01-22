@@ -123,6 +123,8 @@
 <div class="row column">
     <a>Designed by:  Mile Leko, Ljubomir Prce, Domagoj Perić</a> <br>
     <a>We used: Laravel framework, Bootstrap(Admin panel), Zurb Foundation(Homepage), Font Awesome (Font & icons)</a>
+    <a>Mile Leko:10%, Ljubomir Prce:10%, Domagoj Perić:75, Robert Rozić:5%</a>
+    <a>Posebna zahvala Prof. Tomislavu Volariću, asistentu Ivan Krasiću i demonstratoru Robertu Roziću</a>
 </div>
 
 
